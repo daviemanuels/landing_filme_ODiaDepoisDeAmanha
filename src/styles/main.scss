@@ -1,0 +1,61 @@
+@use 'variaveis';
+@use 'header';
+@use 'shows';
+@use 'footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: variaveis.$corTextoTitulo;
+    border-bottom: 2px solid variaveis.$corTextoTitulo;
+}
+
+p {
+    padding: 20px 0;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoPrincipal;
+}
+
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);
+    color: variaveis.$corTextoSecundario;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.text {
+    @include text;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.title--small {
+    @include title(28px);
+}
+
+.title {
+    @include title;
+}
+
+.title--big {
+    @include title(44px);
+}
+

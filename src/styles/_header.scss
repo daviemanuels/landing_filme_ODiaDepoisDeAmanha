@@ -1,0 +1,68 @@
+@use 'variaveis';
+
+.header {
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+
+    &__container {
+
+        &__image {
+            img {
+                width: 100%;
+                background-size: contain;
+            }
+        }
+    }
+
+    &__capa {
+        display: flex;
+        position: absolute;
+        top: 70%;
+        left: 5%;
+        width: 700px;
+
+        &__image {
+            img {
+                width: 200px;
+                height: 100%;
+                background-size: contain;
+            }
+        }
+
+        &__description {
+            background: linear-gradient(to right,rgba(0,0,0,0.91) 0%,rgba(0,0,0,0.06) 85%,rgba(0,0,0,0.01) 100%);
+            height: 250px;
+            width: 100%;
+            padding: 15px;
+
+            &__list {
+                display: flex;
+                padding-top: 10px;
+
+                &__title {
+                    color: variaveis.$corTextoBranco;
+                    font-weight: bold;
+                    padding-right: 30px;
+                }
+
+                &__answer {
+                    color: variaveis.$corTextoSecundario;
+                }
+            }
+
+            h2, p {
+                color: variaveis.$corTextoTitulo;
+                padding: 10px 0;
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 0;
+            }
+
+            p {
+                display: inline-block;
+                padding-right: 77px;
+            }
+        }
+    }
+}
