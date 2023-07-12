@@ -6,11 +6,19 @@
     position: relative;
 
     &__container {
+        @media (max-width: 768px) {
+            display: block;
+            position: static;
+        }
 
         &__image {
             img {
                 width: 100%;
                 background-size: contain;
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
             }
         }
     }
@@ -22,11 +30,23 @@
         left: 5%;
         width: 700px;
 
+        @media (max-width: 768px) {
+            flex-direction: column;
+            position: static;
+        }
+
         &__image {
+
             img {
                 width: 200px;
                 height: 100%;
                 background-size: contain;
+
+                @media (max-width: 768px) {
+                    max-width: 393px;
+                    width: 100%;
+                    
+                }
             }
         }
 
@@ -35,6 +55,11 @@
             height: 250px;
             width: 100%;
             padding: 15px;
+
+            @media (max-width: 768px) {
+                max-width: 393px;
+                margin-bottom: 30px;
+            }
 
             &__list {
                 display: flex;
